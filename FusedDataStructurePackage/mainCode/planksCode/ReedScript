@@ -1,0 +1,9 @@
+make clean
+make
+gcc -g -fPIC  -I/System/Library/Frameworks/JavaVM.framework/Headers -c CReedInterface.c
+gcc -g -fPIC  -I/System/Library/Frameworks/JavaVM.framework/Headers -c reed_sol.c
+gcc -g -fPIC  -I/System/Library/Frameworks/JavaVM.framework/Headers -c jerasure.c
+gcc -g -fPIC  -I/System/Library/Frameworks/JavaVM.framework/Headers -c galois.c
+gcc -shared -W1,-soname,libCReedInterface.so -o libCReedInterface.so CReedInterface.o reed_sol.o jerasure.o galois.o
+
+

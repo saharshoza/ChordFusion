@@ -1,0 +1,4 @@
+*.log
+*.pdf
+logs/
+chronstore/Resources/
